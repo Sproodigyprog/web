@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="jquery.fancybox.css">
+  <link rel="stylesheet" href="sliders.css">
+  <title>Responsive sliders</title>
+</head>
+<body>
+  <!-- Responsive image + Lazyload (for images only)-->
+
+  <div class="main-gallery">
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/01.webp, assets/img/1200_jpg/01.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/01.webp, assets/img/600_jpg/01.jpg">
+      <source                            srcset="assets/img/300_webp/01.webp, assets/img/300_jpg/01.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/01.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/02.webp, assets/img/1200_jpg/02.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/02.webp, assets/img/600_jpg/02.jpg">
+      <source                            srcset="assets/img/300_webp/02.webp, assets/img/300_jpg/02.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/02.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/03.webp, assets/img/1200_jpg/03.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/03.webp, assets/img/600_jpg/03.jpg">
+      <source                            srcset="assets/img/300_webp/03.webp, assets/img/300_jpg/03.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/03.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/04.webp, assets/img/1200_jpg/04.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/04.webp, assets/img/600_jpg/04.jpg">
+      <source                            srcset="assets/img/300_webp/04.webp, assets/img/300_jpg/04.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/04.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/05.webp, assets/img/1200_jpg/05.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/05.webp, assets/img/600_jpg/05.jpg">
+      <source                            srcset="assets/img/300_webp/05.webp, assets/img/300_jpg/05.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/05.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/06.webp, assets/img/1200_jpg/06.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/06.webp, assets/img/600_jpg/06.jpg">
+      <source                            srcset="assets/img/300_webp/06.webp, assets/img/300_jpg/06.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/06.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/01.webp, assets/img/1200_jpg/01.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/01.webp, assets/img/600_jpg/01.jpg">
+      <source                            srcset="assets/img/300_webp/01.webp, assets/img/300_jpg/01.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/01.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/02.webp, assets/img/1200_jpg/02.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/02.webp, assets/img/600_jpg/02.jpg">
+      <source                            srcset="assets/img/300_webp/02.webp, assets/img/300_jpg/02.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/02.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/03.webp, assets/img/1200_jpg/03.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/03.webp, assets/img/600_jpg/03.jpg">
+      <source                            srcset="assets/img/300_webp/03.webp, assets/img/300_jpg/03.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/03.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/04.webp, assets/img/1200_jpg/04.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/04.webp, assets/img/600_jpg/04.jpg">
+      <source                            srcset="assets/img/300_webp/04.webp, assets/img/300_jpg/04.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/04.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/05.webp, assets/img/1200_jpg/05.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/05.webp, assets/img/600_jpg/05.jpg">
+      <source                            srcset="assets/img/300_webp/05.webp, assets/img/300_jpg/05.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/05.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/06.webp, assets/img/1200_jpg/06.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/06.webp, assets/img/600_jpg/06.jpg">
+      <source                            srcset="assets/img/300_webp/06.webp, assets/img/300_jpg/06.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/06.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/01.webp, assets/img/1200_jpg/01.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/01.webp, assets/img/600_jpg/01.jpg">
+      <source                            srcset="assets/img/300_webp/01.webp, assets/img/300_jpg/01.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/01.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/02.webp, assets/img/1200_jpg/02.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/02.webp, assets/img/600_jpg/02.jpg">
+      <source                            srcset="assets/img/300_webp/02.webp, assets/img/300_jpg/02.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/02.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/03.webp, assets/img/1200_jpg/03.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/03.webp, assets/img/600_jpg/03.jpg">
+      <source                            srcset="assets/img/300_webp/03.webp, assets/img/300_jpg/03.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/03.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/04.webp, assets/img/1200_jpg/04.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/04.webp, assets/img/600_jpg/04.jpg">
+      <source                            srcset="assets/img/300_webp/04.webp, assets/img/300_jpg/04.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/04.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/05.webp, assets/img/1200_jpg/05.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/05.webp, assets/img/600_jpg/05.jpg">
+      <source                            srcset="assets/img/300_webp/05.webp, assets/img/300_jpg/05.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/05.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/06.webp, assets/img/1200_jpg/06.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/06.webp, assets/img/600_jpg/06.jpg">
+      <source                            srcset="assets/img/300_webp/06.webp, assets/img/300_jpg/06.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/06.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/01.webp, assets/img/1200_jpg/01.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/01.webp, assets/img/600_jpg/01.jpg">
+      <source                            srcset="assets/img/300_webp/01.webp, assets/img/300_jpg/01.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/01.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/02.webp, assets/img/1200_jpg/02.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/02.webp, assets/img/600_jpg/02.jpg">
+      <source                            srcset="assets/img/300_webp/02.webp, assets/img/300_jpg/02.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/02.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/03.webp, assets/img/1200_jpg/03.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/03.webp, assets/img/600_jpg/03.jpg">
+      <source                            srcset="assets/img/300_webp/03.webp, assets/img/300_jpg/03.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/03.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/04.webp, assets/img/1200_jpg/04.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/04.webp, assets/img/600_jpg/04.jpg">
+      <source                            srcset="assets/img/300_webp/04.webp, assets/img/300_jpg/04.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/04.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/05.webp, assets/img/1200_jpg/05.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/05.webp, assets/img/600_jpg/05.jpg">
+      <source                            srcset="assets/img/300_webp/05.webp, assets/img/300_jpg/05.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/05.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/06.webp, assets/img/1200_jpg/06.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/06.webp, assets/img/600_jpg/06.jpg">
+      <source                            srcset="assets/img/300_webp/06.webp, assets/img/300_jpg/06.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/06.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/01.webp, assets/img/1200_jpg/01.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/01.webp, assets/img/600_jpg/01.jpg">
+      <source                            srcset="assets/img/300_webp/01.webp, assets/img/300_jpg/01.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/01.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/02.webp, assets/img/1200_jpg/02.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/02.webp, assets/img/600_jpg/02.jpg">
+      <source                            srcset="assets/img/300_webp/02.webp, assets/img/300_jpg/02.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/02.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/03.webp, assets/img/1200_jpg/03.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/03.webp, assets/img/600_jpg/03.jpg">
+      <source                            srcset="assets/img/300_webp/03.webp, assets/img/300_jpg/03.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/03.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/04.webp, assets/img/1200_jpg/04.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/04.webp, assets/img/600_jpg/04.jpg">
+      <source                            srcset="assets/img/300_webp/04.webp, assets/img/300_jpg/04.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/04.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/05.webp, assets/img/1200_jpg/05.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/05.webp, assets/img/600_jpg/05.jpg">
+      <source                            srcset="assets/img/300_webp/05.webp, assets/img/300_jpg/05.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/05.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/06.webp, assets/img/1200_jpg/06.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/06.webp, assets/img/600_jpg/06.jpg">
+      <source                            srcset="assets/img/300_webp/06.webp, assets/img/300_jpg/06.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/06.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/01.webp, assets/img/1200_jpg/01.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/01.webp, assets/img/600_jpg/01.jpg">
+      <source                            srcset="assets/img/300_webp/01.webp, assets/img/300_jpg/01.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/01.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/02.webp, assets/img/1200_jpg/02.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/02.webp, assets/img/600_jpg/02.jpg">
+      <source                            srcset="assets/img/300_webp/02.webp, assets/img/300_jpg/02.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/02.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/03.webp, assets/img/1200_jpg/03.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/03.webp, assets/img/600_jpg/03.jpg">
+      <source                            srcset="assets/img/300_webp/03.webp, assets/img/300_jpg/03.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/03.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/04.webp, assets/img/1200_jpg/04.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/04.webp, assets/img/600_jpg/04.jpg">
+      <source                            srcset="assets/img/300_webp/04.webp, assets/img/300_jpg/04.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/04.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/05.webp, assets/img/1200_jpg/05.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/05.webp, assets/img/600_jpg/05.jpg">
+      <source                            srcset="assets/img/300_webp/05.webp, assets/img/300_jpg/05.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/05.jpg" alt="no-image">
+    </picture>
+    <picture class="main-gallery__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/06.webp, assets/img/1200_jpg/06.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/06.webp, assets/img/600_jpg/06.jpg">
+      <source                            srcset="assets/img/300_webp/06.webp, assets/img/300_jpg/06.jpg">
+      <img class="lazy" data-src="assets/img/300_jpg/06.jpg" alt="no-image">
+    </picture>
+  </div>
+
+  <!-- Responsive images + Slick -->
+
+  <div class="gallery-slider">
+    <picture class="gallery-slider__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/01.webp, assets/img/1200_jpg/01.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/01.webp, assets/img/600_jpg/01.jpg">
+      <source                            srcset="assets/img/300_webp/01.webp, assets/img/300_jpg/01.jpg">
+      <img data-lazy="assets/img/300_jpg/01.jpg" alt="no-image">
+    </picture>
+    <picture class="gallery-slider__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/02.webp, assets/img/1200_jpg/02.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/02.webp, assets/img/600_jpg/02.jpg">
+      <source                            srcset="assets/img/300_webp/02.webp, assets/img/300_jpg/02.jpg">
+      <img data-lazy="assets/img/300_jpg/02.jpg" alt="no-image">
+    </picture>
+    <picture class="gallery-slider__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/03.webp, assets/img/1200_jpg/03.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/03.webp, assets/img/600_jpg/03.jpg">
+      <source                            srcset="assets/img/300_webp/03.webp, assets/img/300_jpg/03.jpg">
+      <img data-lazy="assets/img/300_jpg/03.jpg" alt="no-image">
+    </picture>
+    <picture class="gallery-slider__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/04.webp, assets/img/1200_jpg/04.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/04.webp, assets/img/600_jpg/04.jpg">
+      <source                            srcset="assets/img/300_webp/04.webp, assets/img/300_jpg/04.jpg">
+      <img data-lazy="assets/img/300_jpg/04.jpg" alt="no-image">
+    </picture>
+    <picture class="gallery-slider__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/05.webp, assets/img/1200_jpg/05.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/05.webp, assets/img/600_jpg/05.jpg">
+      <source                            srcset="assets/img/300_webp/05.webp, assets/img/300_jpg/05.jpg">
+      <img data-lazy="assets/img/300_jpg/05.jpg" alt="no-image">
+    </picture>
+    <picture class="gallery-slider__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/06.webp, assets/img/1200_jpg/06.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/06.webp, assets/img/600_jpg/06.jpg">
+      <source                            srcset="assets/img/300_webp/06.webp, assets/img/300_jpg/06.jpg">
+      <img data-lazy="assets/img/300_jpg/06.jpg" alt="no-image">
+    </picture>
+    <picture class="gallery-slider__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/01.webp, assets/img/1200_jpg/01.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/01.webp, assets/img/600_jpg/01.jpg">
+      <source                            srcset="assets/img/300_webp/01.webp, assets/img/300_jpg/01.jpg">
+      <img data-lazy="assets/img/300_jpg/01.jpg" alt="no-image">  <!-- It's impossible to pass two images -->
+    </picture>
+    <picture class="gallery-slider__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/02.webp, assets/img/1200_jpg/02.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/02.webp, assets/img/600_jpg/02.jpg">
+      <source                            srcset="assets/img/300_webp/02.webp, assets/img/300_jpg/02.jpg">
+      <img data-lazy="assets/img/300_jpg/02.jpg" alt="no-image">
+    </picture>
+    <picture class="gallery-slider__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/03.webp, assets/img/1200_jpg/03.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/03.webp, assets/img/600_jpg/03.jpg">
+      <source                            srcset="assets/img/300_webp/03.webp, assets/img/300_jpg/03.jpg">
+      <img data-lazy="assets/img/300_jpg/03.jpg" alt="no-image">
+    </picture>
+    <picture class="gallery-slider__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/04.webp, assets/img/1200_jpg/04.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/04.webp, assets/img/600_jpg/04.jpg">
+      <source                            srcset="assets/img/300_webp/04.webp, assets/img/300_jpg/04.jpg">
+      <img data-lazy="assets/img/300_jpg/04.jpg" alt="no-image">
+    </picture>
+    <picture class="gallery-slider__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/05.webp, assets/img/1200_jpg/05.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/05.webp, assets/img/600_jpg/05.jpg">
+      <source                            srcset="assets/img/300_webp/05.webp, assets/img/300_jpg/05.jpg">
+      <img data-lazy="assets/img/300_jpg/05.jpg" alt="no-image">
+    </picture>
+    <picture class="gallery-slider__item">
+      <source media="(min-width:2400px)" srcset="assets/img/1200_webp/06.webp, assets/img/1200_jpg/06.jpg">
+      <source media="(min-width:1200px)" srcset="assets/img/600_webp/06.webp, assets/img/600_jpg/06.jpg">
+      <source                            srcset="assets/img/300_webp/06.webp, assets/img/300_jpg/06.jpg">
+      <img data-lazy="assets/img/300_jpg/06.jpg" alt="no-image">
+    </picture>
+  </div>
+
+  <!-- Responsive images + Slick + Fancybox -->
+
+  <div class="gallery-super">
+
+    <!-- a — Fancybox -->
+    <!-- href — Fancybox; value — medium sized image; https://fancyapps.com/fancybox/3/docs/ -->
+    <!-- data-srcset — Fancybox -->
+    <!-- srcset, sizes — Responsive images; https://developer.mozilla.org/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images -->
+    <!-- data-lazy — Slick; value — Fancybox; https://kenwheeler.github.io/slick/ -->
+
+    <a class="gallery-super__item"
+      href="assets/img/1200_jpg/01.jpg"
+      data-fancybox="gallery"
+      data-srcset="assets/img/2400_webp/01.webp 3000w,
+                  assets/img/2400_jpg/01.jpg 3000w,
+                  assets/img/1200_webp/01.webp 2400w,
+                  assets/img/1200_jpg/01.jpg 2400w,
+                  assets/img/600_webp/01.webp 1200w,
+                  assets/img/600_webp/01.jpg 1200w">
+      <img class="gallery-super__img"
+        srcset="assets/img/1200_webp/01.webp 1200w,
+                  assets/img/1200_jpg/01.jpg 1200w,
+                  assets/img/600_webp/01.webp 600w,
+                  assets/img/600_jpg/01.jpg 600w,
+                  assets/img/300_webp/01.webp 300w,
+                  assets/img/300_jpg/01.jpg 300w"
+        sizes="(min-width: 2400px) 1200px,
+              (min-width: 1200px) 600px,
+              300px"
+        data-lazy="assets/img/300_jpg/01.jpg" alt="01">
+    </a>
+    <a class="gallery-super__item"
+      href="assets/img/1200_jpg/06.jpg"
+      data-fancybox="gallery"
+      data-srcset="assets/img/2400_webp/02.webp 3000w,
+                  assets/img/2400_jpg/02.jpg 3000w,
+                  assets/img/1200_webp/02.webp 2400w,
+                  assets/img/1200_jpg/02.jpg 2400w,
+                  assets/img/600_webp/02.webp 1200w,
+                  assets/img/600_webp/02.jpg 1200w">
+      <img class="gallery-super__img"
+        srcset="assets/img/1200_webp/02.webp 1200w,
+                  assets/img/1200_jpg/02.jpg 1200w,
+                  assets/img/600_webp/02.webp 600w,
+                  assets/img/600_jpg/02.jpg 600w,
+                  assets/img/300_webp/02.webp 300w,
+                  assets/img/300_jpg/02.jpg 300w"
+        sizes="(min-width: 2400px) 1200px,
+              (min-width: 1200px) 600px,
+              300px"
+        data-lazy="assets/img/300_jpg/02.jpg" alt="02">
+    </a>
+    <a class="gallery-super__item"
+      href="assets/img/1200_jpg/06.jpg"
+      data-fancybox="gallery"
+      data-srcset="assets/img/2400_webp/03.webp 3000w,
+                  assets/img/2400_jpg/03.jpg 3000w,
+                  assets/img/1200_webp/03.webp 2400w,
+                  assets/img/1200_jpg/03.jpg 2400w,
+                  assets/img/600_webp/03.webp 1200w,
+                  assets/img/600_webp/03.jpg 1200w">
+      <img class="gallery-super__img"
+        srcset="assets/img/1200_webp/03.webp 1200w,
+                  assets/img/1200_jpg/03.jpg 1200w,
+                  assets/img/600_webp/03.webp 600w,
+                  assets/img/600_jpg/03.jpg 600w,
+                  assets/img/300_webp/03.webp 300w,
+                  assets/img/300_jpg/03.jpg 300w"
+        sizes="(min-width: 2400px) 1200px,
+              (min-width: 1200px) 600px,
+              300px"
+        data-lazy="assets/img/300_jpg/03.jpg" alt="03">
+    </a>
+    <a class="gallery-super__item"
+      href="assets/img/1200_jpg/04.jpg"
+      data-fancybox="gallery"
+      data-srcset="assets/img/2400_webp/04.webp 3000w,
+                  assets/img/2400_jpg/04.jpg 3000w,
+                  assets/img/1200_webp/04.webp 2400w,
+                  assets/img/1200_jpg/04.jpg 2400w,
+                  assets/img/600_webp/04.webp 1200w,
+                  assets/img/600_webp/04.jpg 1200w">
+      <img class="gallery-super__img"
+        srcset="assets/img/1200_webp/04.webp 1200w,
+                  assets/img/1200_jpg/04.jpg 1200w,
+                  assets/img/600_webp/04.webp 600w,
+                  assets/img/600_jpg/04.jpg 600w,
+                  assets/img/300_webp/04.webp 300w,
+                  assets/img/300_jpg/04.jpg 300w"
+        sizes="(min-width: 2400px) 1200px,
+              (min-width: 1200px) 600px,
+              300px"
+        data-lazy="assets/img/300_jpg/04.jpg" alt="04">
+    </a>
+    <a class="gallery-super__item"
+      href="assets/img/1200_jpg/06.jpg"
+      data-fancybox="gallery"
+      data-srcset="assets/img/2400_webp/05.webp 3000w,
+                  assets/img/2400_jpg/05.jpg 3000w,
+                  assets/img/1200_webp/05.webp 2400w,
+                  assets/img/1200_jpg/05.jpg 2400w,
+                  assets/img/600_webp/05.webp 1200w,
+                  assets/img/600_webp/05.jpg 1200w">
+      <img class="gallery-super__img"
+        srcset="assets/img/1200_webp/05.webp 1200w,
+                  assets/img/1200_jpg/05.jpg 1200w,
+                  assets/img/600_webp/05.webp 600w,
+                  assets/img/600_jpg/05.jpg 600w,
+                  assets/img/300_webp/05.webp 300w,
+                  assets/img/300_jpg/05.jpg 300w"
+        sizes="(min-width: 2400px) 1200px,
+              (min-width: 1200px) 600px,
+              300px"
+        data-lazy="assets/img/300_jpg/05.jpg" alt="05">
+    </a>
+    <a class="gallery-super__item"
+      href="assets/img/1200_jpg/06.jpg"
+      data-fancybox="gallery"
+      data-srcset="assets/img/2400_webp/06.webp 3000w,
+                  assets/img/2400_jpg/06.jpg 3000w,
+                  assets/img/1200_webp/06.webp 2400w,
+                  assets/img/1200_jpg/06.jpg 2400w,
+                  assets/img/600_webp/06.webp 1200w,
+                  assets/img/600_webp/06.jpg 1200w">
+      <img class="gallery-super__img"
+        srcset="assets/img/1200_webp/06.webp 1200w,
+                  assets/img/1200_jpg/06.jpg 1200w,
+                  assets/img/600_webp/06.webp 600w,
+                  assets/img/600_jpg/06.jpg 600w,
+                  assets/img/300_webp/06.webp 300w,
+                  assets/img/300_jpg/06.jpg 300w"
+        sizes="(min-width: 2400px) 1200px,
+              (min-width: 1200px) 600px,
+              300px"
+        data-lazy="assets/img/300_jpg/06.jpg" alt="06">
+    </a>
+  </div>
+    <script src="jquery-3.5.1.js"></script>
+    <script src="lazyload.js"></script>
+    <script src="jquery.fancybox.js"></script>
+    <script src="slick.js"></script>
+    <script src="sliders.js"></script>
+</body>
+</html>

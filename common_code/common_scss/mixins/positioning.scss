@@ -1,0 +1,33 @@
+// main: ../index.scss
+
+// Position --------------------------------------------------------------------
+
+@mixin pos-abs($top: null, $right: null, $bottom: null, $left: null) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin pos-fixed($top: null, $right: null, $bottom: null, $left: null) {
+  position: fixed;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// Transform -------------------------------------------------------------------
+
+@mixin transform($prop, $params) {
+  -webkit-transform: $prop#{'(' + $params + ')'};
+  -ms-transform: $prop#{'(' + $params + ')'};
+  transform: $prop#{'(' + $params + ')'};
+}
+
+// Background ------------------------------------------------------------------
+
+@mixin background-cover($img) {
+  background: url($img) no-repeat center/cover; 
+}

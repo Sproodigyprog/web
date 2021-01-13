@@ -1,0 +1,76 @@
+// main: ../index.scss
+
+// Content ---------------------------------------------------------------------
+
+@mixin content($width: 0, $height: 0, $content: '', $display: block) {
+  content: quote($content);
+  display: $display;
+  width: $width;
+  height: $height;
+}
+
+// Arrows -----------------------------------------------------------------------
+
+@mixin arrow-top($width: null, $color: null, $left: null) {
+  content: '';
+  position: absolute;
+  border-left: $width solid transparent;
+  border-right: $width solid transparent;
+  border-bottom: $width solid $color;
+  top: -$width;
+
+  @if $left==null {
+    left: 50%;
+    transform: translateX(-50%);
+  } @else {
+    left: $left;
+  }
+}
+
+@mixin arrow-right($width: null, $color: null, $top: null) {
+  content: '';
+  position: absolute;
+  border-top: $width solid transparent;
+  border-bottom: $width solid transparent;
+  border-left: $width solid $color;
+  right: -$width;
+
+  @if $top==null {
+    top: 50%;
+    transform: translateY(-50%);
+  } @else {
+    top: $top;
+  }
+}
+
+@mixin arrow-bottom($width: null, $color: null, $left: null) {
+  content: '';
+  position: absolute;
+  border-left: $width solid transparent;
+  border-right: $width solid transparent;
+  border-top: $width solid $color;
+  bottom: -$width;
+
+  @if $left==null {
+    left: 50%;
+    transform: translateX(-50%);
+  } @else {
+    left: $left;
+  }
+}
+
+@mixin arrow-left($width: null, $color: null, $top: null) {
+  content: '';
+  position: absolute;
+  border-top: $width solid transparent;
+  border-bottom: $width solid transparent;
+  border-right: $width solid $color;
+  left: -$width;
+
+  @if $top==null {
+    top: 50%;
+    transform: translateY(-50%);
+  } @else {
+    top: $top;
+  }
+}

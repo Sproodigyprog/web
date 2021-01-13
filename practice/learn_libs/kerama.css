@@ -1,0 +1,119 @@
+.header {
+  font-family: Ubuntu, Circe, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  color: #000;
+  font-size: 13px;
+}
+.container {
+  width: 1170px;
+  display: grid;
+  grid-template-rows: 70px 70px;
+  grid-template-columns: 25% auto 5%;
+  grid-gap: 1px;
+  background: #aaa;
+}
+.container > div,
+.container > nav {
+  background: #fff;
+}
+
+.header__logo {
+  grid-row: 1 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header__menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__menu:hover {
+  cursor: pointer;
+}
+.header__menu .sandwich {
+  list-style: none;
+  width: 22px;
+  margin: 0 10px 0 0;
+}
+.header__menu .sandwich__line {
+  background: #000;
+  margin: 5px 0;
+  height: 2px;
+  width: 22px;
+  transition: width .5s;
+}
+.header__menu .sandwich__line:nth-of-type(1),
+.header__menu .sandwich__line:nth-of-type(3) {
+  width: 80%;
+}
+.header__menu:hover .sandwich__line:nth-of-type(1),
+.header__menu:hover .sandwich__line:nth-of-type(3) {
+  width: 100%;
+}
+.header__menu:hover .sandwich__line:nth-of-type(2) {
+  width: 60%;
+}
+.menu-text {
+  padding: 0 0 2px 0;
+  position: relative;
+  box-sizing: border-box;
+  border-bottom: 1px solid #fff;
+  transition: border-bottom-color .5s;
+}
+.header__menu:hover .menu-text {
+  border-bottom-color: #000;
+}
+.header__help {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.header__text {
+  text-transform: uppercase;
+}
+.help-text {
+  margin: 0 10px 0 0;
+}
+.header__icon {
+  display: flex;
+}
+.header__phones {
+  /* border: 1px solid blue; */
+}
+.header__cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .nav__list {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.header .nav__item {
+
+}
+.header .nav__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+}
+.header__search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

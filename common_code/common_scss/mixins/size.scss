@@ -1,0 +1,33 @@
+// main: ../index.scss
+
+// Box -------------------------------------------------------------------------
+
+@mixin box($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin full-box() {
+  width: 100%;
+  height: 100%;
+}
+
+// Transision-------------------------------------------------------------------
+
+@mixin transition-mul($props: list($list), $dur: .3s, $func: ease, $res: null) {
+  @each $prop in $props {
+    $item: #{$prop} $dur $func;
+    $res: append($res, $item, $separator: comma);
+  }
+  -webkit-transition: #{$res};
+  -o-transition: #{$res};
+  transition: #{$res};
+}
+
+// Animation -------------------------------------------------------------------
+
+@mixin animation-simple($name, $dur, $iter) {
+  -webkit-animation: $name $dur $iter;
+  -moz-animation: $name $dur $iter;
+  animation: $name $dur $iter;
+}

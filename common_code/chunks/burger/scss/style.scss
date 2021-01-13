@@ -1,0 +1,35 @@
+// compileExpanded: ../css/style.css, compileOnSave: true
+
+@import '../../../common_scss/mixins/font';
+@import '../../../common_scss/mixins/layout';
+@import '../../../common_scss/mixins/positioning';
+@import '../../../common_scss/mixins/elements';
+@import '../../../common_scss/mixins/animate';
+@import '../../../common_scss/mixins/size';
+@import '../../../common_scss/mixins/media';
+
+body, html, h1, h2, h3, h4, h5, h6, div, p, ol, ul, li {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 0;
+}
+.burgers-wrp {
+  @include flexbox();
+  flex-wrap: wrap;
+  &__item {
+    @include flex-default-center(center, center, column);
+    padding: 10px;
+    box-shadow: 0 0 1px 1px #752121;
+    margin: 10px;
+    border-radius: 8px;
+  }
+  &__title {
+    font-size: 20px;
+    margin: 0 0 20px 0;
+    &.active {
+      color: #DA8D23;
+    }
+  }
+}

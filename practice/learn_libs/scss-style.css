@@ -1,0 +1,19 @@
+body {
+  background: red;
+}
+
+.brands {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: flex;
+}
+
+.brands__row {
+  background: blue;
+}
+
+.brands__column {
+  flex: 1 0 33.33%;
+}

@@ -1,0 +1,182 @@
+// compileExpanded: sliders.css, compileOnSave: true
+
+// Mixins
+
+@mixin font-face($name, $path, $weight: normal, $style: normal, $display: swap) {
+  @font-face {
+    font-family: quote($name);
+    src: url($path+".eot");
+    src: url($path+".eot?#iefix") format("embedded-opentype"),
+         url($path+".woff") format("woff"),
+         url($path+".woff2") format("woff2"),
+         url($path+".ttf") format("truetype"),
+         url($path+".svg##{$name}") format("svg");
+    font-weight: $weight;
+    font-style: $style;
+    font-display: $display;
+  }
+}
+
+@mixin dinamic-font($min-size, $max-size, $layout-width: 1920) {
+  $size-delta: $max-size - $min-size;
+  font-size: calc($min-size + $size-delta * (100vw / $layout-width));
+  @media screen and (max-width: 767.98) {
+    font-size: calc($min-size + ($size-delta + $size-delta * 0.7) * ((100vw - 320px) / $layout-width));
+  }
+}
+
+@mixin transition-mul($props: list($list), $dur: .3s, $func: ease, $res: null) {
+  @each $prop in $props {
+    $item: #{$prop} $dur $func;
+    $res: append($res, $item, $separator: comma);
+  }
+  -webkit-transition: #{$res};
+  -o-transition: #{$res};
+  transition: #{$res};
+}
+
+@mixin flexbox() {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: flex;
+}
+
+@mixin flex-default-center($justify: center, $align: center, $dir: row) {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: flex;
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  -ms-justify-content: $justify;
+  -o-justify-content: $justify;
+  justify-content: $justify;
+  -ms-align-items: $align;
+  align-items: $align;
+  -webkit-flex-direction: $dir;
+  -ms-flex-direction: $dir;
+  flex-direction: $dir;
+}
+
+ @mixin bg-img-cover($img, $bg-color: #939191) {
+  -webkit-background: $bg-color url($img) no-repeat center/cover;
+  -moz-background: $bg-color url($img) no-repeat center/cover;
+  -ms-background: $bg-color url($img) no-repeat center/cover;
+  -o-background: $bg-color url($img) no-repeat center/cover;
+  background: $bg-color url($img) no-repeat center/cover;
+ }
+
+ @mixin bg-img($img, $pos, $size, $repeat, $origin: initial, $clip: initial, $attach: initial, $bg-color: #939191) {
+  -webkit-background: $bg-color url($img) $pos/$size $repeat $origin $clip $attach;
+  -moz-background: $bg-color url($img) $pos/$size $repeat $origin $clip $attach;
+  -ms-background: $bg-color url($img) $pos/$size $repeat $origin $clip $attach;
+  -o-background: $bg-color url($img) $pos/$size $repeat $origin $clip $attach;
+  background: $bg-color url($img) $pos/$size $repeat $origin $clip $attach;
+ }
+
+// @include font-face('PTSans-Caption-Bold', '../fonts/pt_sans_caption/pt-sans-caption-bold', 700);
+
+// Styles
+
+@import 'normalize.scss';
+@import 'slick.scss';
+
+body {
+  font-size: 16px;
+  font-family: 'Ubuntu', 'Roboto', sans-serif;
+}
+.main-gallery {
+	padding: 10px;
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	grid-gap: 10px;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+@media screen and (max-width: 3599.98px) {
+  .main-gallery {
+  	grid-template-columns: repeat(3, auto);
+  }
+}
+@media screen and (max-width: 2399.98px) {
+  .main-gallery {
+  	grid-template-columns: repeat(4, auto);
+  }
+}
+@media screen and (max-width: 899.98px) {
+  .main-gallery {
+  	grid-template-columns: repeat(3, auto);
+  }
+}
+@media screen and (max-width: 599.98px) {
+  .main-gallery {
+  	grid-template-columns: repeat(2, auto);
+  }
+}
+@media screen and (max-width: 499.98px) {
+  .main-gallery {
+  	grid-template-columns: repeat(1, auto);
+  	justify-content: stretch;
+  }
+  picture img, img {
+    width: 100%;
+  }
+}
+.gallery-slider,
+.gallery-super {
+  margin: 0 0 100px 0;
+  a {
+    display: inline-block;
+  }
+  .slick-list {
+  	margin: 0 5px;
+  }
+  .slick-slide {
+  	margin: 0 5px;
+  }
+  .slick-arrow {
+  	width: 150px;
+  	padding: 10px 20px;
+  	outline: none;
+  	border: 1px solid #2d0666;
+  	border-radius: 5px;
+  	color: #2d0666;
+  	position: absolute;
+  	bottom: -60px;
+  	background: #c6d9cb;
+  	font-size: 22px;
+  	cursor: pointer;
+  	@include transition-mul((background-color, color));
+  	&:hover {
+  	  background: #2d0666;
+  	  color: #fff;
+  	}
+  }
+  .slick-prev {
+  	left: 2%;
+  }
+  .slick-next {
+  	right: 2%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

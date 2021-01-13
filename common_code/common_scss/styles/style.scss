@@ -1,0 +1,114 @@
+// main: ../index.scss
+img {
+  max-width: 100%;
+}
+body, p, figure, figcaption, ul, ol, li {
+  padding: 0;
+  margin: 0;
+}
+.wrapper {
+  @include flexbox();
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  background: lightblue;
+  max-width: 1370px;
+  @include xxl-max() {
+    background: lightgreen;
+    max-width: 1170px;
+  }
+  @include xl-max() {
+    background: #D0CF6E;
+    max-width: 970px;
+  }
+  @include lg-max() {
+    background: #5E8CC2;
+    max-width: 740px;
+  }
+  @include md-max() {
+    background: #D78FD5;
+    max-width: 530px;
+  }
+  @include sm-max() {
+    background: #fff;
+    max-width: none;
+  }
+}
+.lock {
+  overflow: hidden;
+}
+.header {
+  .main-nav {
+    &__list {
+      list-style: none;
+      @include flex-default-center(space-between, center);
+    }
+    &__item {
+      padding: 20px 0;
+    }
+    &__link {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 25px;
+      color: #333;
+      &:hover {
+        color: #aaa;
+      }
+    }
+    @include sm-max() {
+      @include transition-simple(transform);
+      @include pos-fixed(0, null, null, 0);
+      @include full-box();
+      @include flex-default-center(center, center, column);
+      @include trl(0, -100%);
+      overflow: auto;
+      background: lightgreen;
+      &__list {
+        flex-direction: column;
+      }
+      &__item {
+        margin: 30px 0;
+      }
+    }
+    &_active {
+      @include trl(0, 0);
+    }
+  }
+
+  .burger {
+    @include box(30px, 30px);
+    position: relative;
+    display: none;
+    padding: 20px 0;
+    cursor: pointer;
+    &__item {
+      @include transition-simple(transform);
+      @include box(100%, 3px);
+      background: #333;
+    }
+    &:hover .burger__item {
+      background: #aaa;
+    }
+    &_active .burger__item{
+      position: absolute;
+      &:nth-of-type(1) {
+        transform: rotate(45deg);
+        top: 30px;
+      }
+      &:nth-of-type(2) {
+        display: none;
+      }
+      &:nth-of-type(3) {
+        transform: rotate(-45deg);
+        top: 30px;
+      }
+    }
+    @include sm-max {
+      @include flex-default-center(space-between, center, column);
+    }
+  }
+}

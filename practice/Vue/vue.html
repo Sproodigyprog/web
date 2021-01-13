@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vue.css">
+    <title>Learn vue</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="cart">
+        <!-- <ul>
+          <li v-for="item in arr" @click="popup(upperCase(item), $event)">{{ item }}</li>
+        </ul> -->
+        <cart-item
+          v-for="item in cart"
+          :key="item.id"
+          :item="item"
+          :style="{ fontSize: postFontSize + 'em' }"
+          @enlarge-text="enlargeFontSize"
+          @diminish-text="diminishFontSize"
+        ></cart-item>
+      </div>
+      <!-- <select v-model="selected">
+        <option v-bind:value="{ number: 123 }">123</option>
+        <option v-bind:value="{ number: 456 }">456</option>
+      </select> -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="vue.js"></script>
+  </body>
+</html>

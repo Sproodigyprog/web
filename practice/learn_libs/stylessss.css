@@ -1,0 +1,160 @@
+.released-projects {
+  padding: 20px;
+}
+
+.released-projects__info {
+
+}
+
+.released-projects__title {
+  position: relative;
+}
+
+.released-projects__title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 50px;
+  height: 3px;
+  background: red;
+}
+
+.released-projects__descr {
+
+}
+
+.released-project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 30px 20px;
+  width: 1156px;
+}
+
+.released-project__info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.released-project__img {
+  height: 250px;
+  margin: 0 49px 0 0;
+}
+
+.released-project__title {
+  width: 100%;
+  margin: 0 0 30px 0;
+}
+
+.released-project__descr {
+  width: 100%;
+  margin: 0 0 30px 0;
+}
+
+.released-project__link {
+  outline: none;
+  border-radius: 0;
+  padding: 5px 30px;
+  background: blue;
+  color: #fff;
+  border: none;
+}
+
+.slider-menu {
+  margin: 0 0 10px 0;
+}
+
+.slider-menu__top-wrp,
+.slider-menu__bottom-wrp {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.slider-menu__link {
+  position: relative;
+  height: 200px;
+  margin: .5%;
+  background: lightblue;
+}
+
+.slider-menu__top-wrp .slider-menu__link:nth-of-type(1) {
+  width: 59.5%;
+}
+
+.slider-menu__top-wrp .slider-menu__link:nth-of-type(2) {
+  width: 39.5%;
+}
+
+.slider-menu__bottom-wrp .slider-menu__link {
+  width: 32.66%;
+}
+
+.slider-menu__top-wrp .slider-menu__link:first-of-type,
+.slider-menu__bottom-wrp .slider-menu__link:first-of-type {
+  margin-left: 0;
+}
+
+.slider-menu__top-wrp .slider-menu__link:last-of-type,
+.slider-menu__bottom-wrp .slider-menu__link:last-of-type {
+  margin-right: 0;
+}
+
+.slider-menu__caption {
+    position: absolute;
+    bottom: 35px;
+    color: #000;
+    font-size: 1.5em;
+    background: #f0f8ffcf;
+    padding: 5px 15px;
+}
+
+/* .maps_wrapp {
+  width: 50%;
+} */
+
+.stores {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 0 20px 0;
+  background: lightgreen;
+}
+
+.stores__title {
+text-transform: uppercase;
+margin: 0 0 40px 0;
+}
+
+.stores__addresses {
+width: 313px;
+padding: 30px 0 0 0;
+}
+
+.stores__wrp {
+margin: 0 0 30px 0;
+padding: 0 0 0 15px;
+}
+
+.stores__address,
+.stores__open {
+margin: 0;
+line-height: 1.2em;
+font-weight: bold;
+}
+
+.top-menu_mobile {
+  display: flex;
+  flex-wrap: wrap;
+}
+.top-menu_mobile__link {
+
+}
+.top-menu_mobile_wrp {
+
+}
+.top-menu_mobile_img {
+
+}
+.top-menu_mobile__caption {
+
+}

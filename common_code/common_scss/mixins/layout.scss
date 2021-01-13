@@ -1,0 +1,50 @@
+// main: ../index.scss
+
+// Flex ------------------------------------------------------------------------
+
+@mixin flexbox() {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: flex;
+}
+
+@mixin flex-default-center($justify: center, $align: center, $dir: row) {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: flex;
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  -ms-justify-content: $justify;
+  -o-justify-content: $justify;
+  justify-content: $justify;
+  -ms-align-items: $align;
+  align-items: $align;
+  -webkit-flex-direction: $dir;
+  -ms-flex-direction: $dir;
+  flex-direction: $dir;
+}
+
+@mixin col($grow, $shrink, $num, $add: null) {
+  // $num: 3 & $add: 2 = 66.667%
+  // $num: 4 & $add: 3 = 75%
+  // $num: 5 & $add: 2 = 40%
+  // $num: 5 & $add: 3 = 60%
+  // $num: 5 & $add: 4 = 80%
+  @if $add {
+    -webkit-flex: $grow $shrink (100% / $num * $add);
+    -ms-flex: $grow $shrink (100% / $num * $add);
+    flex: $grow $shrink (100% / $num * $add);
+  } @else {
+    -webkit-flex: $grow $shrink (100% / $num);
+    -ms-flex: $grow $shrink (100% / $num);
+    flex: $grow $shrink (100% / $num);
+  }
+}
+
+@mixin img-box($padding-bottom: 58%) {
+  padding: 0 0 $padding-bottom 0;
+}

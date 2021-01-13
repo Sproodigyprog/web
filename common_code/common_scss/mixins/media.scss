@@ -1,0 +1,100 @@
+//main: ../index.scss
+
+// Desctop first
+
+@mixin xxl-max($width: 1400px, $type: screen) {
+  @media #{$type} and (max-width: $width) {
+    @content;
+  }
+}
+@mixin xl-max($width: 1200px, $type: screen) {
+  @media #{$type} and (max-width: $width) {
+    @content;
+  }
+}
+@mixin lg-max($width: 992px, $type: screen) {
+  @media #{$type} and (max-width: $width) {
+    @content;
+  }
+}
+@mixin md-max($width: 768px, $type: screen) {
+  @media #{$type} and (max-width: $width) {
+    @content;
+  }
+}
+@mixin sm-max($width: 560px, $type: screen) {
+  @media #{$type} and (max-width: $width) {
+    @content;
+  }
+}
+@mixin xs-max($width: 480px, $type: screen) {
+  @media #{$type} and (max-width: $width) {
+    @content;
+  }
+}
+
+// Mobile first
+
+@mixin xxl-min($width: 1400px, $type: screen) {
+  @media #{$type} and (min-width: $width) {
+    @content;
+  }
+}
+@mixin xl-min($width: 1200px, $type: screen) {
+  @media #{$type} and (min-width: $width) {
+    @content;
+  }
+}
+@mixin lg-min($width: 992px, $type: screen) {
+  @media #{$type} and (min-width: $width) {
+    @content;
+  }
+}
+@mixin md-min($width: 768px, $type: screen) {
+  @media #{$type} and (min-width: $width) {
+    @content;
+  }
+}
+@mixin sm-min($width: 560px, $type: screen) {
+  @media #{$type} and (min-width: $width) {
+    @content;
+  }
+}
+@mixin xs-min($width: 480px, $type: screen) {
+  @media #{$type} and (min-width: $width) {
+    @content;
+  }
+}
+
+// One span
+
+@mixin xxl-only($min-width: 1200, $max-width: 1400px, $type: screen) {
+  @media #{$type} and (min-width: $width) and (max-width: $width) {
+    @content;
+  }
+}
+@mixin xl-only($min-width: 992px, $max-width: 1200px, $type: screen) {
+  @media #{$type} and (min-width: $width) and (max-width: $width) {
+    @content;
+  }
+}
+@mixin lg-only($min-width: 768px, $max-width: 992px, $type: screen) {
+  @media #{$type} and (min-width: $width) and (max-width: $width) {
+    @content;
+  }
+}
+@mixin md-only($min-width: 560px, $max-width: 768px, $type: screen) {
+  @media #{$type} and (min-width: $width) and (max-width: $width) {
+    @content;
+  }
+}
+@mixin sm-only($min-width: 480px, $max-width: 560px, $type: screen) {
+  @media #{$type} and (min-width: $width) and (max-width: $width) {
+    @content;
+  }
+}
+@mixin xs-only($min-width: 0, $max-width: 480px, $type: screen) {
+  @media #{$type} and (min-width: $width) and (max-width: $width) {
+    @content;
+  }
+}

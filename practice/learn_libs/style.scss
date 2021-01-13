@@ -1,0 +1,56 @@
+// compileExpanded: scss-style.css, compileOnSave: true
+
+body {
+  background: red;
+}
+.brands {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: flex;
+  &__row {
+    background: blue;
+  }
+  &__column {
+    flex: 1 0 33.33%;
+  }
+}
+
+
+
+.brands__column_b {
+
+}
+
+.brands__item {
+
+}
+
+.item {
+
+}
+
+.item__logo {
+
+}
+
+.brands__content {
+
+}
+
+.block {
+
+}
+
+.block__title {
+
+}
+
+.block__text {
+
+}
+
+.brands__img {
+
+}

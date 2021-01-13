@@ -1,0 +1,48 @@
+body, html, h1, h2, h3, h4, h5, h6, div, p, ol, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 0;
+}
+
+.burgers-wrp {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.burgers-wrp__item {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 0 0 1px 1px #752121;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.burgers-wrp__title {
+  font-size: 20px;
+  margin: 0 0 20px 0;
+}
+
+.burgers-wrp__title.active {
+  color: #DA8D23;
+}

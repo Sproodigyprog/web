@@ -1,0 +1,34 @@
+// main: ../index.scss
+
+// Transision-------------------------------------------------------------------
+
+@mixin transition-simple($prop, $dur: .3s, $func: ease) {
+  -webkit-transition: $prop $dur $func;
+  -o-transition: $prop $dur $func;
+  transition: $prop $dur $func;
+}
+
+@mixin transition-mul($props: list($list), $dur: .3s, $func: ease, $res: null) {
+  @each $prop in $props {
+    $item: #{$prop} $dur $func;
+    $res: append($res, $item, $separator: comma);
+  }
+  -webkit-transition: #{$res};
+  -o-transition: #{$res};
+  transition: #{$res};
+}
+
+// Animation -------------------------------------------------------------------
+
+@mixin animation-simple($name, $dur, $iter) {
+  -webkit-animation: $name $dur $iter;
+  -moz-animation: $name $dur $iter;
+  animation: $name $dur $iter;
+}
+
+// Transform -------------------------------------------------------------------
+
+@mixin trl($x, $y) {
+  transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+}

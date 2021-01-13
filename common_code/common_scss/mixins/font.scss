@@ -1,0 +1,39 @@
+//main: ../index.scss
+
+@mixin fonts($name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($name);
+    src: url($path+".eot");
+    src: url($path+".eot?#iefix") format("embedded-opentype"),
+         url($path+".woff") format("woff"),
+         url($path+".woff2") format("woff2"),
+         url($path+".ttf") format("truetype"), url($path+".svg##{$name}") format("svg");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@mixin font-size($size, $height, $weight: normal, $spacing: normal) {
+  font-size: $size;
+  font-weight: $weight;
+
+  @if $height==normal {
+    line-height: normal;
+  } @else {
+    line-height: $height / $size;
+  }
+
+  @if $spacing==normal {
+    letter-spacing: normal;
+  } @else {
+    letter-spacing: #{$spacing / $size}em;
+  }
+}
+
+@mixin dinamic-font($min-size, $max-size, $layout-width: 1920) {
+  $size-delta: $max-size - $min-size;
+  font-size: calc($min-size + $size-delta * (100vw / $layout-width));
+  @media screen and (max-width: 767.98) {
+    font-size: calc($min-size + ($size-delta + $size-delta * 0.7) * ((100vw - 320px) / $layout-width));
+  }
+}

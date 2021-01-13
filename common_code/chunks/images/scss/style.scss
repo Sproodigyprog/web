@@ -1,0 +1,86 @@
+// compileExpanded: ../css/style.css, compileOnSave: true
+
+@import '../../../common_scss/mixins/font';
+@import '../../../common_scss/mixins/layout';
+@import '../../../common_scss/mixins/positioning';
+@import '../../../common_scss/mixins/elements';
+@import '../../../common_scss/mixins/animate';
+@import '../../../common_scss/mixins/size';
+@import '../../../common_scss/mixins/media';
+
+body, html, h1, h2, h3, h4, h5, h6, div, p, ol, ul, li {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 0;
+}
+img {
+  max-width: 100%;
+}
+.wrapper {
+  @include flex-default-center(center, center, column);
+  min-height: 100%;
+  overflow: hidden;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  background: lightblue;
+  max-width: 1370px;
+  // @include xxl-max() {
+  //   background: lightgreen;
+  //   max-width: 1170px;
+  // }
+  // @include xl-max() {
+  //   background: #D0CF6E;
+  //   max-width: 970px;
+  // }
+  // @include lg-max() {
+  //   background: #5E8CC2;
+  //   max-width: 740px;
+  // }
+  // @include md-max() {
+  //   background: #D78FD5;
+  //   max-width: 530px;
+  // }
+  // @include sm-max() {
+  //   background: #fff;
+  //   max-width: none;
+  // }
+}
+.row {
+  @include flexbox();
+  .vert-box {
+    @include col(0, 0, 3);
+    padding: 10px;
+    box-sizing: border-box;
+    &__img {
+
+    }
+    &__txt {
+      font-size: 22px;
+    }
+  }
+}
+.row {
+  @include flexbox();
+  .vert-box-fit {
+    @include col(0, 0, 3);
+    padding: 10px;
+    box-sizing: border-box;
+    &__img {
+      position: relative;
+      padding: 0 0 70% 0;
+      & img {
+        @include pos-abs(0, null, null, 0);
+        @include full-box();
+        object-fit: cover;
+      }
+
+    }
+    &__txt {
+      font-size: 22px;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+// main: blocks.scss
+
+// Media 768
+
+@media screen and (max-width: 767.98px) {
+
+  // Icon blocks 768
+
+  .icon-block {
+    // display: flex;
+    // align-items: flex-start;
+    // align-items: center;
+    &__icon-wrp {
+      // display: flex;
+      // margin: 0 .5em 0 0;
+    }
+    &__icon {
+      // margin: auto;
+    }
+    &__descr {
+      // display: flex;
+      // flex-direction: column;
+    }
+    &__par {
+      // margin: 0 .5em 0 0;
+      &:last-child {
+        // margin: 0;
+      }
+    }
+    &__link {
+
+    }
+  }
+
+  // Nav blocks 768
+
+  .simple-nav-burger {
+    top: 84px;
+  }
+  .submenu-nav-burger {
+    top: 84px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//------------------------------------------------------------------
